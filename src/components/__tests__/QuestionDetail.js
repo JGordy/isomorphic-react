@@ -26,7 +26,7 @@ describe('The Question Detail component', () => {
         });
 
     });
-    
+
     describe("The display element", () => {
         it('should not regress', () => {
             const tree = renderer.create(
@@ -39,5 +39,5 @@ describe('The Question Detail component', () => {
             )
             expect(tree.toJSON()).toMatchSnapshot();
         });
-    })
+    });
 });
