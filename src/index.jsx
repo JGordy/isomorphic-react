@@ -34,9 +34,9 @@ const render = (_App)=>{
     ReactDOM.render(
         <Provider store={store}>
             <ConnectedRouter  history={history}>
-                 <_App />
-             </ConnectedRouter>
-         </Provider>
+                <_App />
+            </ConnectedRouter>
+        </Provider>
         ,document.getElementById("AppContainer"));
 };
 
