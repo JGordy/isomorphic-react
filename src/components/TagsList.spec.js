@@ -5,9 +5,7 @@ import renderer from 'react-test-renderer';
 describe("The tags list", () => {
     it("renders as expected", () => {
         const tree = renderer
-            .create(
-                <TagsList tags={['css', 'html', 'swift']} />
-            )
+            .create(<TagsList tags={['css', 'html', 'swift']} />)
             .toJSON();
         expect(tree).toMatchSnapshot();
     })
