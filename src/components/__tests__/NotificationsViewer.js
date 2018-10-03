@@ -1,7 +1,7 @@
-import NotificationsViewer from '../NotificationViewer';
-import renderer from 'react-test-renderer';
 import React from 'react';
 import { delay } from 'redux-saga';
+import renderer from 'react-test-renderer';
+import NotificationsViewer from '../NotificationViewer';
 
 jest.mock('../../services/NotificationsService');
 
@@ -16,10 +16,10 @@ describe("The notification viewer", () => {
     it("should display the correct number of notifications", async () => {
         const tree = renderer.create(
             <NotificationsViewer />
-        )
+        );
         await delay();
         const instance = tree.root;
-        const component = instance.findByProps({className: 'notifications'})
+        const component = instance.findByProps({className: 'notifications'});
         const text = component.children[0];
         expect(text).toEqual("5 Notifications Awaiting!");
     });
